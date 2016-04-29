@@ -11,7 +11,7 @@ private:
 	double price1;
 	double sellPrice;
 	double quantity1;
-	double quantity2;
+	double quantity2; //use better variable names
 public:
 	double getPrice1()
 	{
@@ -37,6 +37,7 @@ public:
 	{
 		for (int i = 0; i < MAXProducts; i++)
 		{
+			//it's not an array
 			cout << "name:";
 			cin >> product[i].name;
 			cout << "BuyPrice:";

@@ -10,6 +10,7 @@ struct Product{
 	int maxStored = 100;
 
 	void setProduct(double _sellprice, double _buyprice, int _available){
+		//what about the name
 		sellPrice = _sellprice;
 		buyPrice = _buyprice;
 		available = _available;
@@ -35,7 +36,7 @@ public:
 		sold = _sellQuantity;
 		for (int i = 0; i < 20; i++){
 			for (int j = 0; j < _sellQuantity; j++){
-				if (strcpy(_name, a[j].name)){
+				if (strcpy(_name, a[j].name)){ //strcmp is the function
 					a[j].available--;
 					income += a[j].sellPrice;
 					clientsCount++;
@@ -43,7 +44,7 @@ public:
 			}
 		}
 	}
-	int counter = 0;
+	int counter = 0; // this should be in the buy function, else what is it used for?
 	void buy(char* _name){
 		
 		for (int i = 0; i < 50; i++){
@@ -57,7 +58,7 @@ public:
 	int megaincome(){
 		for (int i = 0; i <= sold; i++)
 		{
-			income += sold*a[i].sellPrice;
+			income += sold*a[i].sellPrice; //you can't use sold like that
 		}
 	}
 	int megaexpences(){

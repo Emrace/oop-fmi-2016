@@ -61,7 +61,10 @@ struct Product {
 
 struct Cafeteria {
 	int clients; // broi klienti za edin den
+	
 	int times; // kolko puti se e prodal edin produkt dnevno (za oborota)
+	//what is it used for?
+
 	double sum1; // kolko pari pecheli dnevno
 	double sum2; // kolko pari se harchat dnevno
 	
@@ -79,7 +82,7 @@ struct Cafeteria {
 		sum1 += product.price2; //multiplied by n?
 
 		cout << "Nalichno kolichestvo: " << product.quantity << endl <<
-			"Pechalba: " << sum1 << endl;
+			"Pechalba: " << sum1 << endl; // no need to print that
 	}
 
 	void buy(Product product) {

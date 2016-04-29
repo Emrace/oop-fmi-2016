@@ -59,7 +59,7 @@ struct Cafeteria
 		{
 			for (int j = 0; j < nPr; j++)
 			{
-				if (strcmp(name, products[j].name)){
+				if (strcmp(name, products[j].name)){ //strcmp returns 0 if the strings are equal
 					products[j].quantity--;
 					cashForDay += products[j].price;
 					cout <<"Pechalbata e: "<<cashForDay;

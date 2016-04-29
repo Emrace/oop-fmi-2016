@@ -58,6 +58,8 @@ void Cafeteria::printStatistics(){
 		cout << endl;
 		pr[i].print();
 	}
+
+	//you don't print income and expenses
 }
 int main(){
 	

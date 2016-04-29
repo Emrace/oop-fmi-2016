@@ -53,6 +53,7 @@ public:
 		buyingPrice = _buyingPrice;
 		sellingPrice = _sellingPrice;
 	}
+	//this should be in cafeteria
 	void sell()
 	{
 		int numOfProdsYouWantToBuy;
@@ -61,7 +62,7 @@ public:
 		cin >> numOfProdsYouWantToBuy;
 		quantity -= numOfProdsYouWantToBuy;
 		int income = 0;
-		income += numOfProdsYouWantToBuy*sellingPrice;
+		income += numOfProdsYouWantToBuy*sellingPrice; //you can't use income anywhere
 
 		
 	}

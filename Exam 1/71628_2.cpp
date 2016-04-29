@@ -33,7 +33,7 @@ struct Cafeteria{
 	char mostSold[32];
 	double oborot=0;
 	double razhodi = 0;
-	double prihodi = 0;
+	double prihodi = 0; //not used anywhere
 	double pechalba = 0;
 	void read(){
 		for (int i = 0; i < productsCounter; i++)
@@ -63,6 +63,7 @@ struct Cafeteria{
 				s[i].quantity++;
 				counter++;
 			}
+			//no need for that
 			cout << "Zakupeno kolichestvo "<<s[i].name << " : " << counter<<endl;
 		}
 	}
@@ -73,7 +74,7 @@ struct Cafeteria{
 		for (int i = 0; i < productsCounter; i++){
 			if (s[i].timesSold > helper.timesSold)
 			{
-				strcpy_s(helper.name, s[i].name);
+				strcpy_s(helper.name, s[i].name); //it's not called like that
 				helper.timesSold = s[i].timesSold;
 			}
 		}
@@ -83,7 +84,7 @@ struct Cafeteria{
 	void printStatistics(){
 		for (int i = 0; i < productsCounter; i++){
 			s[i].printProduct();
-			razhodi = s[i].buyPrice*s[i].timesSold;
+			razhodi = s[i].buyPrice*s[i].timesSold; //it should be += and better do it in the buy method then call it
 		}
 		pechalba = oborot - razhodi;
 		cout << "Clients for today: " << clientsCount << endl;

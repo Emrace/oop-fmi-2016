@@ -78,14 +78,15 @@ public:
 
 };
 
-string getMostPopularProduct(Product product[], int n)
+string getMostPopularProduct(Product product[], int n) //it should be in cafeteria
 {
 	int mostPopular = product[0].quantity;
 	int currentIndex = 0;
 
 	for (int i = 0; i < n; i++)
 	{
-		if (mostPopular < product[i + 1].quantity)
+		if (mostPopular < product[i + 1].quantity) 
+		//you will go outside of the array when i == n-1, also shouldn't it be reversed
 		{
 			mostPopular = product[i + 1].quantity;
 			currentIndex = i + 1;
@@ -103,6 +104,7 @@ int main()
 {
 	Cafeteria Pesho("Pesho", 0, 0, 0, 0);
 
+	//products should be in the cafeteria
 	Product a("Coca-cola", 2, 5, 100, 100);
 	Product b("Fanta", 3, 8, 100, 100);
 	Product c("Cafee", 0.5, 2, 100, 100);
